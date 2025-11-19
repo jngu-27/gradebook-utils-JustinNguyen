@@ -22,3 +22,9 @@ def median(scores):
         return scores[mid]
     else:
         return (scores[mid - 1] + scores[mid]) / 2
+def letter_grade(scores, points):   
+    """
+    Return the letter grade for a list of scores.
+    Scores are clamped at a minimum of 0 to avoid negative results.
+    """
+    return [max(0, s + points) for s in scores]
