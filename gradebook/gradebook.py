@@ -29,6 +29,7 @@ def median(scores):
     else:
         return (scores[mid - 1] + scores[mid]) / 2
 
+
 def letter_grade(score):
     """Return a letter grade (A, B, C, D, F) for a numeric score."""
     if score >= 90:
@@ -41,5 +42,3 @@ def letter_grade(score):
         return "D"
     else:
         return "F"
-
-
