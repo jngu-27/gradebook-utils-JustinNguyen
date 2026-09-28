@@ -7,7 +7,7 @@ def average(scores):
     return sum(scores) / len(scores) if scores else 0.0
 def curve(scores, points):
     """Return a new list of scores after adding `points` to each."""
-    return [s + points for s in scores]
+    return [max(0, s + points) for s in scores]
 def median(scores):
     """
     Return the median of a list of numeric values.
@@ -22,9 +22,4 @@ def median(scores):
         return scores[mid]
     else:
         return (scores[mid - 1] + scores[mid]) / 2
-def letter_grade(scores, points):   
-    """
-    Return the letter grade for a list of scores.
-    Scores are clamped at a minimum of 0 to avoid negative results.
-    """
-    return [max(0, s + points) for s in scores]
+
